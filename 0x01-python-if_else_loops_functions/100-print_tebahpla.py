@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print("zYxWvUtSrQpOnMlKjIhGfEdCbA")
+print("zYxWvUtSrQpOnMlKjIhGfEdCbA".format(), end='')
