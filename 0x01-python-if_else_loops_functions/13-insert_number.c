@@ -7,40 +7,44 @@
  *Return: kjedds
  */
 
-listint *insert_node(listint_t **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *new;
-	listint_t *temp = *head, *current;
+	listint_t *nxt, *newnode;
+	listint_t *prev = NULL;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
+	if (!head)
 		return (NULL);
-	node->new = number;
-	node->next = NULL;
 
-	if (!*head)
+	newnode = malloc(sizeof(listint_t));
+
+	if (!newnode)
+		return (NULL);
+
+	newnode->n = number;
+
+	if (!(*head))
 	{
-		*head = new;
-		return (new);
+		newnode->next = NULL;
+		*head = newnode;
+		return (newnode);
 	}
 
-	if (temp->n > number)
+	if (number < (*head)->n)
 	{
-		node->next = *head;
-		*head = new;
+		newnode->next = *head;
+		*head = newnode;
+		return (newnode);
 	}
 
-	else
+	nxt = *head;
+
+	while (nxt && nxt->n <= number)
 	{
-		while (temp)
-		{
-			if (temp->n > number)
-				break;
-			current = temp;
-			temp = temp->next;
-		}
-		new->next = current->next;
-		current->next = new;
+		prev = nxt;
+		nxt = nxt->next;
 	}
-	return (new);
+
+	newnode->next = nxt;
+	prev->next = newnode;
+	return (newnode);
 }
