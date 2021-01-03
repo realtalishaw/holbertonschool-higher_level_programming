@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
         "C": 100,
         "D": 500,
         "M": 1000
-}
+    }
 
     for i in range(len(rs)):
         if i < len(rs) - 1 and key[rs[i]] < key[rs[i + 1]]:
