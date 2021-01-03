@@ -10,14 +10,10 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *tmp;
-	char *buffer;
+	char buffer[1000];
 	int i = 0;
 	int end = 0;
 
-	buffer = malloc(sizeof(head));
-
-	/*if (!buffer)
-	  return (NULL);*/
 
 	if (!*head || !head)
 		return (1);
