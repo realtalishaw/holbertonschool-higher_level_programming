@@ -5,14 +5,12 @@
 
 class Rectangle:
     number_of_instances = 0
-    print_symbol = "#"
 
     """g lks jdks jl mgddffsdf sdfsd fsd gsfs sfgs s """
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
-
-   # Rectangle.number_of_instances += 1
+    #Rectangle.number_of_instances += 1
 
     @property
     def height(self):
@@ -49,6 +47,7 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
+        print_symbol = "#"
         rectangle = print_symbol * self.width
         return "\n".join(list(rectangle for i in range(self.height)))
 
@@ -58,7 +57,7 @@ class Rectangle:
         return "Rectangle ({}, {})".format(self.width, self.height)
 
     def __del__(self):
-      #  Rectangle.number_of_instances -= 1
+        # Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     def bigger_or_equal(rect_1, rect_2):
