@@ -32,21 +32,21 @@ class Square(Rectangle):
                 i += 1
                 if i == 1:
                     self.id = arg
-                    elif i == 2:
-                        self.width = arg
-                    elif i == 3:
-                        self.height = arg
-                    elif i == 4:
-                        self.x = arg
-                    elif i == 5:
-                        self.y = arg
+                elif i == 2:
+                    self.width = arg
+                elif i == 3:
+                    self.height = arg
+                elif i == 4:
+                    self.x = arg
+                elif i == 5:
+                    self.y = arg
         else:
             for key, item in kwargs.items():
                     setattr(self, key, item)
 
     def to_dictionary(self):
         """jfdklfjklsjd kfjkldsfjkld"""
-            dicts = {}
-            for a in ["id", "width", "height", "x", "y"]:
-                dicts[a] = getattr(self, a)
-            return dicts
+        dicts = {}
+        for a in ["id", "width", "height", "x", "y"]:
+            dicts[a] = getattr(self, a)
+        return dicts
