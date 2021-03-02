@@ -1,2 +1,2 @@
 -- im just saying comments are for production
-SELECT score, COUNT(*) AS number FROM `second_table` GROUP BY score DESC;
+SELECT score, name FROM `second_table` WHERE name IS NOT NULL ORDER BY score DESC;
